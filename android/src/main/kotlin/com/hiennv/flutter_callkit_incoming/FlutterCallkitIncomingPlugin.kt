@@ -327,7 +327,7 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                 // EDIT - clear the incoming notification/ring (after accept/decline/timeout)
                 "hideCallkitIncoming" -> {
                     val data = Data(call.arguments() ?: HashMap())
-                    context?.stopService(Intent(context, CallkitSoundPlayerService::class.java))
+                    // context?.stopService(Intent(context, CallkitSoundPlayerService::class.java))
                     callkitNotificationManager?.clearIncomingNotification(data.toBundle(), false)
                 }
 
